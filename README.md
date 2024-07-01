@@ -9,7 +9,10 @@ this project expects that the user will place their own copies of the following 
 * `/data/Copy of correct_twitter_202102.tsv`
 
 ### Running the notebooks
-To run the notebooks, build and start the docker app: `docker compose up --build`.
+To run the notebooks, build and start the docker app: 
+
+`docker compose up --build`.
+
 This will start 4 containers:
 * mongodb
 * api-server
@@ -19,6 +22,9 @@ This will start 4 containers:
 Once the containers are up and running you can navigate to [localhost:8888](http://localhost:8888) in your browser to access an instance of jupyter lab. Once you are in you can open the notebooks from the `/notebooks` directory and run each part of the assignment.
 
 In order to test the assignment, run the [first notebook](notebooks/Part_1-Data_Ingestion.ipynb).
+
+***Note***:
+If you see errors in the log from `monogdb-express`, then try killing the app and then running `docker compose up` or `docker compose up --build` again. I am still troubleshooting this behavior, but this seems to be the workaround for now. Please reach out if you have experience any issues running these notebooks.
 
 ### Part 1
 I started by setting up a jupyter container to load and understand the data. Next, 
