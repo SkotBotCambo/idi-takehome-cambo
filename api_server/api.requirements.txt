@@ -1,0 +1,8 @@
+Flask==2.2.2
+gunicorn
+flask-restful
+flask-cors
+pymongo
+Werkzeug==2.2.2
+pandas
+pytest

@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:1
+
+FROM python:3.11
+
+WORKDIR /code
+
+COPY ./api_server/api.requirements.txt api.requirements.txt
+COPY ./api_server/app.py app.py
+COPY ./api_server/db.py db.py
+COPY ./api_server/gunicorn.conf.py gunicorn.conf.py
+
+RUN pip3 install -r api.requirements.txt
+
+EXPOSE 50505
+
+ENTRYPOINT ["gunicorn", "app:app"]

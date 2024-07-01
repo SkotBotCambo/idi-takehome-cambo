@@ -1,0 +1,7 @@
+# syntax=docker/dockerfile:1
+
+FROM jupyter/scipy-notebook
+COPY notebooks/requirements.jupyter.txt requirements.jupyter.txt
+RUN pip install -r requirements.jupyter.txt
+
+CMD jupyter lab
