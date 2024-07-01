@@ -1,0 +1,7 @@
+jupyterlab
+pandas
+numpy
+tqdm
+pymongo
+plotly
+ipytest
